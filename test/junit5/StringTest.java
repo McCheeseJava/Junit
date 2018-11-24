@@ -1,6 +1,7 @@
 package junit5;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,6 +28,18 @@ class StringTest {
 		int expectedLength = 4;
 		assertEquals(actualLength, expectedLength);
 
+	}
+
+	@SuppressWarnings("null")
+	@Test
+	@DisplayName("When length is null, throw an exception")
+	void length_exception() {
+	  String str = null;
+	  assertThrows(NullPointerException.class,
+	       () -> {
+	         str.length();
+	       }
+	  );
 	}
 
 }
