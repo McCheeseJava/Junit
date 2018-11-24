@@ -1,0 +1,10 @@
+/src/.classpath
+/src/.gitignore
+/src/.project
+/.recommenders
+.DS_Store
+.settings
+/bin
+/.classpath
+/.project
+/.metadata/
